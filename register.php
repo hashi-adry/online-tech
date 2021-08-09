@@ -51,6 +51,28 @@
                     <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password" name="password_2" required>
                   </div>
                 </div>
+                 <div class="form-group">
+                  <input type="text" class="form-control form-control-user" id="exampledob" placeholder="DOB" name="dob" required>
+                </div>
+                 <div class="form-group">
+                  <input type="text" class="form-control form-control-user" id="examplecounty" placeholder="County" name="county" required>
+                </div>
+                 <div class="form-group">
+                  <input type="text" class="form-control form-control-user" id="examplecity" placeholder="City" name="city" required>
+                </div>
+                 <div class="form-group">
+                  <input type="text" class="form-control form-control-user" id="exampleestate" placeholder="Estate" name="estate" required>
+                </div>
+                 <div class="form-group">
+                  <input type="text" class="form-control form-control-user" id="examplepostal_code" placeholder="Postal_code" name="postal_code" required>
+                </div>
+                 <div class="form-group">
+                  <input type="text" class="form-control form-control-user" id="exampleprofession" placeholder="Profession" name="profession" required>
+                </div>
+                 <div class="form-group">
+                  <input type="text" class="form-control form-control-user" id="examplebrief_desc" placeholder="Brief_desc" name="brief_desc" required>
+                </div>
+                
                 <div class="form-group">
                   <select class="browser-default custom-select" name="role">
                     <option value="" selected disabled>Select your role</option>

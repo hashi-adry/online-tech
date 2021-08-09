@@ -81,7 +81,7 @@ else{
                 <td><?php echo $row['first_name'].$row['other_names'] ;?></td>
                 <td><?php echo $row['county'] ;?></td>
                 <td><?php echo $row['estate'] ;?></td>
-                <td><?php echo $row['Profession'] ;?></td>
+                <td><?php echo $row['profession'] ;?></td>
                 <td class='text-center'>
                   <button type='button' class='btn btn-outline-success btn-sm m-0 waves-effect' data-toggle='modal' data-target="#ViewUser<?= $row['c_Id'];?>"><i class='fas fa-fw fa-eye'"></i></button>
                 </td>

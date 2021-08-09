@@ -14,6 +14,14 @@
 		    $password_1=$con->real_escape_string($_POST['password_1']);
         $password_2=$con->real_escape_string($_POST['password_2']);
 		    $roles=$con->real_escape_string($_POST['role']);
+            $dob=$con->real_escape_string($_POST['dob']);
+            $county=$con->real_escape_string($_POST['county']);
+            $city=$con->real_escape_string($_POST['city']);
+            $estate=$con->real_escape_string($_POST['estate']);
+            $postal_code=$con->real_escape_string($_POST['postal_code']);
+            $profession=$con->real_escape_string($_POST['profession']);
+            $brief_desc=$con->real_escape_string($_POST['brief_desc']);
+            $image=$con->real_escape_string($_POST['image']);
             if(empty($email && $password_1 )){			
                 $error="Please fill in all fields";
             }
@@ -27,8 +35,8 @@
               }	
 		        else{
                 $password = md5($password_1);
-                $query = "INSERT INTO `users` (`c_id`, `first_name`, `other_names`, `email`, `national_id`, `password`, `role`) 
-                VALUES (NULL, '$firstName', '$secondName', '$email', '$NId', '$password', '$roles')";
+                $query = "INSERT INTO `users` (`c_id`, `first_name`, `other_names`, `email`, `national_id`, `password`, `role`,'dob','county','city','estate','postal_code','profession','brief_desc','image') 
+                VALUES (NULL, '$firstName', '$secondName', '$email', '$NId', '$password', '$roles','$dob','$county','$city','$estate','$postal_code','$profession','$brief_desc','$image')";
      
                 $run_query=mysqli_query($con,$query);
               

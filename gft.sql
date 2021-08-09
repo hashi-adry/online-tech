@@ -114,7 +114,7 @@ CREATE TABLE `users` (
   `email` varchar(30) NOT NULL,
   `password` varchar(60) NOT NULL,
   `role` varchar(30) NOT NULL,
-  `dob` date NOT NULL,
+  
   `county` varchar(20) NOT NULL,
   `city` varchar(20) NOT NULL,
   `estate` varchar(20) NOT NULL,
