@@ -2,8 +2,8 @@
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 16, 2020 at 12:43 PM
+-- Host: localhost
+-- Generation Time: Sep 17, 2021 at 10:54 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `gft`
+-- Database: `Online-technician`
 --
 
 -- --------------------------------------------------------
@@ -52,7 +52,15 @@ INSERT INTO `job` (`J_Id`, `job_name`, `job_description`, `skill_needed`, `assig
 (10, 'Tap Replacement', 'Tap replacement service required immediately.', 'Carpentry', '', '', 'Paypal', 0),
 (11, 'Gate Repair', 'Gate fixing required ASAP.', 'welding', 'Millicent  Waweru', '0', 'Cash', 1),
 (12, 'Gate Repair', 'Gate fixing required ASAP.', 'welding', 'Millicent  Waweru', ' ', 'Cash', 2),
-(13, 'Broken Table', 'Bhjklsdaikvfdsv', 'Carpentry', 'Millicent  Waweru', ' ', 'Paypal', 0);
+(13, 'Broken Table', 'Bhjklsdaikvfdsv', 'Carpentry', 'Millicent  Waweru', ' ', 'Paypal', 0),
+(14, 'broken chairs', 'some chairs are broken', 'Carpentry', 'liz mutuku', '', 'Cash', 0),
+(15, 'sink blocked', 'plumbing', 'plumbing', 'liz mutuku', '', 'Cash', 0),
+(16, 'broken chairs', '', 'Carpentry', 'Liz mutuku', '', 'Cash', 0),
+(17, 'broken chairs', '', 'welding', 'Liz mutuku', '', 'Cash', 0),
+(18, 'broken chairs', '', 'welding', 'Liz mutuku', '', 'Cash', 0),
+(19, 'broken chairs', '', 'Carpentry', 'Liz mutuku', '', 'Cash', 0),
+(20, 'gate repair', '', 'welding', 'Liz mutuku', '', 'Cash', 0),
+(21, 'wimdow repair', '', 'welding', 'Liz mutuku', '', 'Cash', 0);
 
 -- --------------------------------------------------------
 
@@ -107,43 +115,25 @@ CREATE TABLE `reviews` (
 --
 
 CREATE TABLE `users` (
-  `c_Id` int(10) NOT NULL,
-  `first_name` varchar(20) NOT NULL,
-  `other_names` varchar(20) NOT NULL,
-  `national_id` int(10) NOT NULL,
-  `email` varchar(30) NOT NULL,
-  `password` varchar(60) NOT NULL,
-  `role` varchar(30) NOT NULL,
-  
-  `county` varchar(20) NOT NULL,
-  `city` varchar(20) NOT NULL,
-  `estate` varchar(20) NOT NULL,
-  `postal_code` varchar(20) NOT NULL,
-  `Profession` varchar(50) NOT NULL,
-  `brief_desc` varchar(100) NOT NULL,
-  `image` varchar(50) NOT NULL
+  `C_id` int(255) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `second_name` varchar(255) NOT NULL,
+  `national_id` int(20) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `role` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`c_Id`, `first_name`, `other_names`, `national_id`, `email`, `password`, `role`, `dob`, `county`, `city`, `estate`, `postal_code`, `Profession`, `brief_desc`, `image`) VALUES
-(2, 'Dennis ', 'Koome', 33125489, 'koome@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'Admin', '0000-00-00', '', '', '', '', 'plumber', 'ghjkl;fa', '../Images/1568133167_IMG_0129.JPG'),
-(5, 'Millicent ', 'Chelagat', 33804040, 'milli@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'Technician', '0000-00-00', '', '', '', '', 'carpenter', 'vbnm', '../Images/1568110249_IMG_0129.JPG'),
-(8, 'Obadiah ', 'Chelagat', 33804040, 'mchela@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'Technician', '0000-00-00', '', '', '', '', 'electrician', 'fghjm,', '1568109990_IMG_1152.JPG'),
-(9, 'Millicent ', 'Waweru', 33804040, 'rose@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'Client', '0000-00-00', '', '', '', '', 'welder', 'Straight Forward', '../Images/1568124373_IMG_2413.JPG'),
-(10, 'monna ', 'owano', 34353789, 'monnaowano94@gmail.com', '25f9e794323b453885f5181f1b624d0b', 'Client', '0000-00-00', '', '', '', '', '', 'fghjm,', '1568109990_IMG_1152.JPG'),
-(11, 'laura ', 'akinyi', 34256789, 'lauraakinyi@gmail.com', '6ebe76c9fb411be97b3b0d48b791a7c9', 'Client', '0000-00-00', '', '', '', '', '', 'Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec s', '1568109990_IMG_1152.JPG'),
-(12, 'Maxwell ', 'Maragia', 333333333, 'maxmaragia@gmail.com', '68ab3a20b51cf480cf800e544b67761e', 'Client', '0000-00-00', '', '', '', '', '', 'fghjm,', '1568109990_IMG_1152.JPG'),
-(13, 'Punky ', 'Adelle', 36622654, 'punki@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Technician', '0000-00-00', '', '', '', '', '', 'fghjm,', '1568109990_IMG_1152.JPG'),
-(19, 'obadiah', 'Waweru', 112233, 'obadiahwaweru@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'Admin', '0000-00-00', '', '', '', '', '', '', ''),
-(31, 'martha', 'atieno', 22336655, 'ati@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'Admin', '0000-00-00', '', '', '', '', '', '', ''),
-(32, 'Victor', 'Mutuku', 14458796, 'vic@gmail.com', 'fc4f3b64bedd0882dc8b34922e61f423', 'Admin', '0000-00-00', '', '', '', '', '', '', ''),
-(33, 'Harry', 'bruce', 33225577, 'harry@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'Admin', '0000-00-00', '', '', '', '', '', '', ''),
-(34, 'ahmed', 'dahir', 1234667, 'heykal@gmail.com', 'db5e0a61d4734b50da3e4e08917486f9', 'Client', '0000-00-00', '', '', '', '', '', '', ''),
-(35, 'ahmed', 'dahir', 1234667, 'heykal@gmail.com', 'db5e0a61d4734b50da3e4e08917486f9', 'Client', '0000-00-00', '', '', '', '', '', '', ''),
-(36, 'jonas', 'wanyela', 123456, 'jonas@gmail.com', 'b3258e8bf998591e0bf0e824caa0c9dc', 'Client', '0000-00-00', '', '', '', '', '', '', '');
+INSERT INTO `users` (`C_id`, `first_name`, `second_name`, `national_id`, `email`, `password`, `role`) VALUES
+(1, 'Abdirizak', 'Hashy', 765432, 'hashiadry19@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'Technician'),
+(2, 'Abdirizak', 'Hashy', 765432, 'hashiadry19@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'Technician'),
+(3, 'Adry', 'Hashy', 456789, 'hashiadry19@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Admin'),
+(4, 'Liz', 'mutuku', 456789, 'lizmutuku91@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'Client'),
+(5, 'hassan', 'hussein', 67890, 'hh@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 'Technician');
 
 --
 -- Indexes for dumped tables
@@ -171,7 +161,7 @@ ALTER TABLE `reviews`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`c_Id`);
+  ADD PRIMARY KEY (`C_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -181,7 +171,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `job`
 --
 ALTER TABLE `job`
-  MODIFY `J_Id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `J_Id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `job_category`
@@ -199,7 +189,7 @@ ALTER TABLE `reviews`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `c_Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `C_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
