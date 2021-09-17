@@ -9,7 +9,7 @@ if($_SESSION['tech'])
 $user = mysqli_query($con, "SELECT * FROM users WHERE `email`='$email'");
 while($get_user = mysqli_fetch_assoc($user))
       {
-          $prof=$get_user['Profession'];
+          
       }
 
 ?>
@@ -72,7 +72,7 @@ while($get_user = mysqli_fetch_assoc($user))
             </thead>
             <tbody>
               <?php 
-                  $jobcompleted = mysqli_query($con, "SELECT * FROM job WHERE job_status=0 AND skill_needed='$prof'");
+                  $jobcompleted = mysqli_query($con, "SELECT * FROM job WHERE job_status=0 AND skill_needed=''");
                   while ($row = mysqli_fetch_array($jobcompleted)) {
                     
               ?>

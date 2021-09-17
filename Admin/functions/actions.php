@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: maxipain
- * Date: 11/26/2017
- * Time: 5:53 PM
- */
 
 include "db.php";
 

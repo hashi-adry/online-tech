@@ -6,7 +6,7 @@ if($_SESSION['client'])
   include_once 'functions/post.php';
 }
 else{
-    header('location:../login.php');
+    header('location:../tech/jobsavailable.php');
 }
 ?>
 <!DOCTYPE html>
@@ -66,8 +66,7 @@ else{
                 <div class="input-group mb-3">
                   <select class="custom-select" name="payment_method">
                     <option selected disabled>Method of Payment</option>
-                    <option value="Mpesa">Mpesa</option>
-                    <option value="Paypal">Paypal</option>
+                   
                     <option value="Cash">Cash On Deliver</option>
                   </select>
                 </div>

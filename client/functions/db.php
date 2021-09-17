@@ -13,7 +13,7 @@ class DATABASE{
     public function __construct()
     {
 
-        $this->con=mysqli_connect("localhost","root","","gft")or die(mysqli_error($this->con));
+        $this->con=mysqli_connect("localhost","root","","Online-technician")or die(mysqli_error($this->con));
 
         if(!$this->con)
         {

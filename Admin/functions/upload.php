@@ -3,7 +3,7 @@ $msg = "";
 $css_cls = "";
 $email = $_SESSION['admin'];
 
-$conn = mysqli_connect('localhost', 'root', '', 'gft');
+$conn = mysqli_connect('localhost', 'root', '', 'Online-technician');
 if (isset($_POST['save-details'])) {
   
     $bio = $_POST['bio'];

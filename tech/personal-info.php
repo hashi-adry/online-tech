@@ -13,10 +13,10 @@ if($_SESSION['tech'])
     $fname=$get_user['first_name'];
     $sname=$get_user['other_names'];
     $role=$get_user['role'];
-    $prof=$get_user['Profession'];
+    $prof=$get_user['profession'];
     $bio=$get_user['brief_desc'];
     $names = $fname.' '.$sname;
-    $url = $get_user['image'];
+   
   }
 }
 else{

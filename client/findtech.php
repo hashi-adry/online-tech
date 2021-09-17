@@ -14,8 +14,9 @@ if($_SESSION['client'])
   while($get_user = mysqli_fetch_assoc($user))
   {
       $fname=$get_user['first_name'];
-      $sname=$get_user['other_names'];
+      $sname=$get_user['second_name'];
       $role=$get_user['role'];
+      $profession=$get_user['profession'];
       $names = $fname.' '.$sname;
   }
 
@@ -63,9 +64,10 @@ else{
           <table id="dataTable" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
             <thead>
               <tr>
-              <th class="th-sm">Name</th>
-              <th class="th-sm">County</th>
-              <th class="th-sm">State</th>
+              <th class="th-sm">First Name</th>
+              <th class="th-sm">Second Name</th>
+              <th class="th-sm">National ID</th>
+              <th class="th-sm">Email</th>
               <th class="th-sm">Profession</th>
               <th class="th-sm">Action</th>
               </tr>
@@ -78,10 +80,11 @@ else{
               ?>
 
            <tr>
-                <td><?php echo $row['first_name'].$row['other_names'] ;?></td>
-                <td><?php echo $row['county'] ;?></td>
-                <td><?php echo $row['estate'] ;?></td>
-                <td><?php echo $row['profession'] ;?></td>
+                <td><?php echo $row['first_name'];?></td>
+                <td><?php echo $row['second_name'] ;?></td>
+                <td><?php echo $row['national_id'] ;?></td>
+                <td><?php echo $row['email'] ;?></td>
+                
                 <td class='text-center'>
                   <button type='button' class='btn btn-outline-success btn-sm m-0 waves-effect' data-toggle='modal' data-target="#ViewUser<?= $row['c_Id'];?>"><i class='fas fa-fw fa-eye'"></i></button>
                 </td>
@@ -135,15 +138,7 @@ else{
   }
               ?>                        
             </tbody>
-            <tfoot>
-              <tr>
-              <th class="th-sm">Name</th>
-              <th class="th-sm">County</th>
-              <th class="th-sm">State</th>
-              <th class="th-sm">Profession</th>
-              <th class="th-sm">Action</th>
-              </tr>
-            </tfoot>
+            
           </table>
         </div>
       </div>

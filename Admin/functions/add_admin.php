@@ -1,6 +1,6 @@
 <?php
 $firstName=$secondName=$NId=$email=$password=$roles=$error="";
-$conn = mysqli_connect('localhost', 'root', '', 'gft');
+$conn = mysqli_connect('localhost', 'root', '', 'Online-technician');
   if(isset($_POST['save_admin'])){
     $firstName=$con->real_escape_string($_POST['first_name']);
     $secondName=$con->real_escape_string($_POST['second_name']);

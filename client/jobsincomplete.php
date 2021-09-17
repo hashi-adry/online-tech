@@ -9,7 +9,7 @@ if($_SESSION['client'])
   while($get_user = mysqli_fetch_assoc($user))
   {
       $fname=$get_user['first_name'];
-      $sname=$get_user['other_names'];
+      $sname=$get_user['second_name'];
       $names = $fname.' '.$sname;
       
   }

@@ -1,42 +1,37 @@
 <?php
   @session_start();
-	include 'db-conn.php';
-	$message = "";
+    include 'db-conn.php';
+    $message = "";
      $firstName=$secondName=$NId=$email=$password_1=$password_2=$error="";
    
     
-	
-	if(isset($_POST['save'])){
+    
+    if(isset($_POST['save'])){
         $firstName=$con->real_escape_string($_POST['first_name']);
         $secondName=$con->real_escape_string($_POST['second_name']);
         $email=$con->real_escape_string($_POST['email']);
         $NId=$con->real_escape_string($_POST['national_id']);
-		    $password_1=$con->real_escape_string($_POST['password_1']);
+            $password_1=$con->real_escape_string($_POST['password_1']);
         $password_2=$con->real_escape_string($_POST['password_2']);
-		    $roles=$con->real_escape_string($_POST['role']);
-            $dob=$con->real_escape_string($_POST['dob']);
-            $county=$con->real_escape_string($_POST['county']);
-            $city=$con->real_escape_string($_POST['city']);
-            $estate=$con->real_escape_string($_POST['estate']);
-            $postal_code=$con->real_escape_string($_POST['postal_code']);
-            $profession=$con->real_escape_string($_POST['profession']);
-            $brief_desc=$con->real_escape_string($_POST['brief_desc']);
-            $image=$con->real_escape_string($_POST['image']);
-            if(empty($email && $password_1 )){			
+            $roles=$con->real_escape_string($_POST['role']);
+           
+
+            
+            if(empty($email && $password_1 )){          
                 $error="Please fill in all fields";
             }
-              if($password_1!=$password_2){		
+              if($password_1!=$password_2){     
               echo $error="
                 <div class='alert alert-warning alert-dismissible fade show' role='alert'>The two password are not matching 
                   <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                     <span aria-hidden='true'>&times;</span>
                   </button>
                 </div>";
-              }	
-		        else{
+              } 
+                else{
                 $password = md5($password_1);
-                $query = "INSERT INTO `users` (`c_id`, `first_name`, `other_names`, `email`, `national_id`, `password`, `role`,'dob','county','city','estate','postal_code','profession','brief_desc','image') 
-                VALUES (NULL, '$firstName', '$secondName', '$email', '$NId', '$password', '$roles','$dob','$county','$city','$estate','$postal_code','$profession','$brief_desc','$image')";
+                $query = "INSERT INTO `users` (`c_id`, `first_name`, `second_name`, `email`, `national_id`, `password`, `role`) 
+                VALUES (NULL, '$firstName', '$secondName', '$email', '$NId', '$password', '$roles')";
      
                 $run_query=mysqli_query($con,$query);
               
@@ -49,10 +44,10 @@
               else{
                   echo $con->error;
               }
-		  
-			
-		
-		        }
+          
+            
+        
+                }
     }
         
         //login

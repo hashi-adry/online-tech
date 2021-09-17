@@ -158,7 +158,7 @@
                   while ($row = mysqli_fetch_array($results)) {
                     ?>
                     <tr>
-                      <td><?php echo $row['first_name']." ".$row['other_names'] ;?></td>
+                      <td><?php echo $row['first_name']." ".$row['second_name'] ;?></td>
                       <td><?php echo $row['email'] ;?></td>
                       <td>
                         <button type='button' class='btn btn-outline-danger btn-sm m-0 waves-effect' data-toggle='modal' data-target="#DeleteUser<?php echo $row['c_Id']; ?>"> <i class='fas fa-fw fa-trash'></i></button>
