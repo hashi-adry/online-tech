@@ -1,0 +1,16 @@
+{
+    "name": "sam/mpesa-integration",
+    "description": "An integration of mpesa services using php",
+    "type": "project",
+    "require": {
+        "nesbot/carbon": "^2.53"
+    },
+    "license": "ksjfberegijrhgwifbergovergby834734rlqeb",
+    "authors": [
+        {
+            "name": "Sam Kangethe",
+            "email": "samkangethe83@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}

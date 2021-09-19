@@ -51,8 +51,8 @@ else{
             <thead>
               <tr>
               <th class="th-sm">Job</th>
-              <th class="th-sm">Job Description</th>
-              <th class="th-sm">Assigned By</th>
+              <th class="th-sm">Job Feedback</th>
+              <th class="th-sm">Posted By</th>
               <th class="th-sm">Payment method</th>
               <th class="th-sm">Action</th>
               </tr>
@@ -66,7 +66,7 @@ else{
 
               <tr>
                 <td><?php echo $row['job_name'] ;?></td>
-                <td><?php echo $row['job_description'] ;?></td>
+                <td><?php echo $row['comments'] ;?></td>
                 <td><?php echo $row['assigned_by'] ;?></td>
                 <td><?php echo $row['payment_method'] ;?></td>
                 <td class='text-center'>
@@ -114,8 +114,8 @@ else{
             <tfoot>
               <tr>
               <th class="th-sm">Job</th>
-              <th class="th-sm">Job Description</th>
-              <th class="th-sm">Assigned By</th>
+              <th class="th-sm">Job Feedback</th>
+              <th class="th-sm">Posted By</th>
               <th class="th-sm">Payment Method</th>
               <th class="th-sm">Action</th>
               </tr>

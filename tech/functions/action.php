@@ -29,6 +29,9 @@ while ($row = mysqli_fetch_array($jobcompleted))
           //   echo '<script>window.location.href="client.php"</script>';
             $msg_del = "Job marked as Complete";
             $del_css_cls = "alert-success";
+            header("Location: mpesa-integration/mpesa-integration-2/index.php");
+            
+            
         } else {
             echo "Error submiting record: " . $con->error;
             $msg_del = "Failed to mark as Complete";

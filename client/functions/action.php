@@ -90,7 +90,19 @@ while ($row = mysqli_fetch_array($jobincomplete))
             $del_css_cls = "alert-warning";
         }
       }  
-
+if(isset($_POST['comment'])){
+	$feedback = $_POST['comments'];
+	$id = $_POST['comment'];
+	$query = "UPDATE job SET comments='$feedback' WHERE J_Id='$id'";
+	$run_query=mysqli_query($con,$query);
+	if($run_query){
+		$msg_del="Feedback added succesfully";
+		$del_css_cls="alert-success";
+	}else{
+		$msg_del="Error uploading feedback ";
+		$del_css_cls="alert-warning";
+	}
+}
 
 
 

@@ -9,7 +9,7 @@ if($_SESSION['client'])
   while($get_user = mysqli_fetch_assoc($user))
   {
       $fname=$get_user['first_name'];
-      $sname=$get_user['other_names'];
+      $sname=$get_user['second_name'];
       $names = $fname.' '.$sname;
       
   }
@@ -84,6 +84,7 @@ else{
                 <td><?php echo $row['assigned_to'] ;?></td>
                 <td><?php echo $row['payment_method'] ;?></td>
                 <td class='text-center'>
+                <button type='button' class='btn btn-outline-success btn-sm m-0 waves-effect' data-toggle='modal' data-target="#feedback<?= $row['J_Id'];?>"> <i class='fas fa-fw fa-edit'></i></button>
                   <button type='button' class='btn btn-outline-danger btn-sm m-0 waves-effect' data-toggle='modal' data-target="#delete<?= $row['J_Id'];?>"> <i class='fas fa-fw fa-trash'></i></button>
                 </td>
               </tr>
@@ -122,6 +123,50 @@ else{
                   </div>
                 </div>
               <!-- Delete Modal -->
+              <!--****************************************************************-->
+              <!-- Comment Modal -->
+              <div class="modal fade" id="feedback<?= $row['J_Id'];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-notify modal-danger" role="document">
+                    <!--Content-->
+                    <div class="modal-content">
+                      <!--Header-->
+                      <div class="modal-header">
+                        <p class="heading lead">Job Feedback</p>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true" class="white-text">&times;</span>
+                        </button>
+                      </div>
+
+                      <!--Body-->
+                      <form method="post">
+		              <div class="modal-body">
+		                <div class="text-center">
+		                  <i class="fas fa-check fa-4x mb-3 animated rotateIn"></i>
+		                  <div class="row">
+		                  	<label for="comments">Enter Job Feedback here</label>
+		                 	<textarea class="form-control" rows="4" id="comments" name="comments"></textarea>
+		                  </div>
+		                </div>
+		              </div>
+
+		              <!--Footer-->
+		              <div class="modal-footer justify-content-center">
+		              
+		                <button type="submit" name="comment" class="btn btn-outline-success" value="<?= $row['J_Id']; ?>">Add Comments</button>
+		                <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
+		              
+		              </div>
+                      </form>
+                    </div>
+                    <!--/.Content-->
+                  </div>
+                </div>
+              <!-- Delete Modal -->
+              
+              <!--*************************************************************-->
+              
               <?php }
           ?>              
             </tbody>

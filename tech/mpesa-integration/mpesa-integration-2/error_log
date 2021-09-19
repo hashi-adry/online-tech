@@ -1,0 +1,10 @@
+[18-Sep-2021 23:11:00 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function stkPush(), 1 passed in /home2/carrotco/public_html/mpesa-integration/MpesaProcessor.php on line 10 and exactly 2 expected in /home2/carrotco/public_html/mpesa-integration/MpesaProcessor.php:50
+Stack trace:
+#0 /home2/carrotco/public_html/mpesa-integration/MpesaProcessor.php(10): stkPush(10)
+#1 {main}
+  thrown in /home2/carrotco/public_html/mpesa-integration/MpesaProcessor.php on line 50
+[18-Sep-2021 23:11:19 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function stkPush(), 1 passed in /home2/carrotco/public_html/mpesa-integration/MpesaProcessor.php on line 10 and exactly 2 expected in /home2/carrotco/public_html/mpesa-integration/MpesaProcessor.php:50
+Stack trace:
+#0 /home2/carrotco/public_html/mpesa-integration/MpesaProcessor.php(10): stkPush(10)
+#1 {main}
+  thrown in /home2/carrotco/public_html/mpesa-integration/MpesaProcessor.php on line 50

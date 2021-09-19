@@ -63,21 +63,23 @@ while($get_user = mysqli_fetch_assoc($user))
           <table id="dataTable" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
             <thead>
               <tr>
+              <th class="th-sm">Date Posted</th>
               <th class="th-sm">Job</th>
               <th class="th-sm">Job Description</th>
-              <th class="th-sm">Assigned By</th>
+              <th class="th-sm">Posted By</th>
               <th class="th-sm">Payment method</th>
               <th class="th-sm">Action</th>
               </tr>
             </thead>
             <tbody>
               <?php 
-                  $jobcompleted = mysqli_query($con, "SELECT * FROM job WHERE job_status=0 AND skill_needed=''");
+                  $jobcompleted = mysqli_query($con, "SELECT * FROM job WHERE job_status=0");
                   while ($row = mysqli_fetch_array($jobcompleted)) {
                     
               ?>
 
               <tr>
+                <td><?php echo $row['datetime'];?></td>
                 <td><?php echo $row['job_name'] ;?></td>
                 <td><?php echo $row['job_description'] ;?></td>
                 <td><?php echo $row['assigned_by'] ;?></td>
@@ -123,9 +125,10 @@ while($get_user = mysqli_fetch_assoc($user))
             </tbody>
             <tfoot>
               <tr>
+              <th class="th-sm">Date Posted</th>
               <th class="th-sm">Job</th>
               <th class="th-sm">Job Description</th>
-              <th class="th-sm">Assigned By</th>
+              <th class="th-sm">Posted By</th>
               <th class="th-sm">Payment Method</th>
               <th class="th-sm">Action</th>
               </tr>
