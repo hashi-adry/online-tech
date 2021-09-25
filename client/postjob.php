@@ -68,6 +68,7 @@ else{
                     <option selected disabled>Method of Payment</option>
                    
                     <option value="Cash">Cash On Deliver</option>
+                    <option value="MPESA">MPESA On Deliver</option>
                   </select>
                 </div>
                 <!-- Payment - Multi-select -->

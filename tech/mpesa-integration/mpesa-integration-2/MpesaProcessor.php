@@ -71,7 +71,7 @@ function lipaNaMpesaPassword()
             'PartyB' => 174379,
             'PhoneNumber' => $number,
             'CallBackURL' => 'https://60a8b840129d.ngrok.io/callback',
-            'AccountReference' => "Project Test Payment",
+            'AccountReference' => "Online technician",
             'TransactionDesc' => "lipa Na M-PESA"
         ];
 
@@ -87,5 +87,5 @@ function lipaNaMpesaPassword()
        curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
        $curl_response = curl_exec($curl);
        print_r($curl_response);
-       header("Location: ../../jobsavailable.php");
+      /* header("Location: ../../jobsavailable.php");*/
    }

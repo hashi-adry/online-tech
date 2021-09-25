@@ -579,11 +579,11 @@
       </ul>
       <!-- Call to action -->
 
-    </div>
+    </div>s
     <!-- Footer Elements -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <!-- <div class="footer-copyright text-center py-3">&copy 2021Copyright:-->
       <a href="https://mdbootstrap.com/education/bootstrap/"> GFTech.com</a>
     </div>
     <!-- Copyright -->
